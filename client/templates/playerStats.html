@@ -1,0 +1,31 @@
+
+<template name="first">
+  <div class="small-4 columns panel">	
+	<div>
+		<div class="pass_att button small alert">PA</div>
+		<div class="pass_comp button small success">PC</div>
+		<div class="button tiny shots_on_frame">SOF</div>
+		<div class="button tiny shots">Shot</div>
+ 	</div>
+ 	<div>
+	 	<p>Pass Attempt: {{pass_att}}</p>
+	 	<p>Pass Completion: {{pass_comp}}</p>
+	 	<p>Shots On Frame: {{shots_on_frame}}</p>
+	 	<p>Shots: {{shots}}</p>
+ 	</div>
+  </div>
+</template>
+
+
+<template name="statsLayout">
+	<div class="row">
+		<div class="small-9 columns">
+			{{#each playerstats}}
+				{{>first}}
+			{{/each}}
+		</div>
+		<div class="small-3 columns">
+			<h1>Stats for Team</h1>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,25 @@
+<template name="players">
+	 <form class="new-player row">
+  	<div class="small-2 columns" ><input type="text" name="first_name" placeholder="First Name"/></div>
+  	<div class="small-2 columns" ><input type="text" name="last_name" placeholder="Last Name"/></div>
+  	<div class="small-2 columns" ><input type="text" name="position" placeholder="Position"/></div>
+  	<div class="small-1 columns" ><input type="text" name="number" placeholder="Number"/></div>
+  	<div class="small-1 columns end" ><input class="button small" type="submit" /></div>
+  </form>
+
+  <ul>
+  	{{#each players}}
+  		<div class="row">
+        <li class="player-display panel">
+          <div class="small-3 columns"><a href="{{pathFor 'player'}}" >{{first_name}} {{last_name}}</a></div> 
+          <div class="small-3 columns">{{position}} </div>
+          <div class="small-3 columns end">{{number}}</div>
+          
+         </li>
+      </div>
+      
+  	{{/each}}
+  </ul>
+  	
+
+</template>

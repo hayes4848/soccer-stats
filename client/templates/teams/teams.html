@@ -1,0 +1,31 @@
+<template name="teams">
+<h2>Teams</h2>
+<div class="row">
+ <form class="new-team">
+  	<div class="small-3 columns" ><input type="text" name="team_name" placeholder="Team Name"/></div>
+  	<div class="small-3 columns" ><input type="text" name="coach" placeholder="Coach"/></div>
+  	<div class="small-3 columns" ><input type="text" name="divPlace" placeholder="Divison/Age Group"/></div>
+  	<div class="small-1 columns end" ><input class="button small" type="submit" value="Create Team"/></div>
+
+  </form>
+</div>  
+
+  <ul class="no-style">
+  		<li class="row no-style ">
+  			<div class="small-2 columns team-header">Team Name:</div>
+  			<div class="small-2 columns team-header">Coach:</div>
+  			<div class="small-2 columns end team-header">Division:</div>
+  		</li>
+  	{{#each teams}}
+  		<li class="row no-style">
+  			<div class="small-2 columns">{{team_name}}</div>
+  			<div class="small-2 columns">{{coach}}</div>
+  			<div class="small-2 columns">{{divPlace}}</div>
+  			<div class="small-1 columns"><a href="{{pathFor 'team'}}">View</a></div>
+  			<div class="small-1 columns end"><button class="delete">&times;</button></div>
+  		</li>
+  	{{/each}}
+  	
+  </ul>
+
+</template>

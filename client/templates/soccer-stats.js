@@ -22,9 +22,6 @@ if (Meteor.isClient) {
   Template.body.helpers({
     playerstats: function () {
       return playerStats.find({});
-    }, 
-    teamInfo: function () {
-      return Teams.findOne(session.get('teamId'));
     }
   })
 

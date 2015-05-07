@@ -1,0 +1,23 @@
+<head>
+	<title>Soccer Stats Tracker</title>
+</head>
+
+<body>
+  <h1>Soccer Stats Tracker</h1>
+ {{#if currentUser}}
+ 	{{>nav}}
+ {{/if}}
+ {{> loginButtons}}	
+
+<ul>
+  	{{#each players}}
+  		<li>{{first_name}}</li>
+  	{{/each}}
+  </ul>
+
+</body>
+
+<template name="hello">
+  <button class="adder">Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
