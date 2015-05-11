@@ -1,0 +1,12 @@
+<template name="testGame">
+<h1>Game Page</h1>
+{{#with game}}
+	<h3>Our Score: {{ourScore}}</h3>
+{{/with}}
+
+{{#each players}}
+	<p>{{first_name}} {{last_name}}</p>
+	{{>first}}
+{{/each}}
+
+</template>
